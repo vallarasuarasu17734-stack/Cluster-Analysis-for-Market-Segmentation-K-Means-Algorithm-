@@ -102,8 +102,8 @@ The dataset consists of 16 manually entered customer data points representing tw
     [[75.66666667 82.83333333]
      [25.16666667 35.66666667]
      [30.         68.        ]]
-     <img width="431" height="295" alt="image" src="https://github.com/user-attachments/assets/9d53ac82-9ab2-4327-9709-a27a1981661f" />
 
+   <img width="432" height="297" alt="Screenshot 2026-11-24 074219" src="https://github.com/user-attachments/assets/a19392e2-e27a-410e-be72-2952eca31365" />
 
 
 ## Result
