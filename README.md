@@ -91,8 +91,8 @@ plt.legend(loc='upper left', fontsize=9)
 plt.grid(True, linestyle='--', alpha=0.6)    
 plt.tight_layout()  
 plt.show()  
+<img width="432" height="297" alt="image" src="https://github.com/user-attachments/assets/82ce1bae-86e9-4869-b4db-645b414f1cb3" />
 
-<img width="1021" height="727" alt="image" src="https://github.com/user-attachments/assets/c829d1e6-caf4-494e-8572-38e59b9d063b" />
 
 ## Result
 Thus to apply the K-Means Clustering algorithm to segment a dataset into distinct clusters and visualize how similar data points are grouped together for market segmentation successfully.
