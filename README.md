@@ -42,6 +42,69 @@ The dataset consists of 16 manually entered customer data points representing tw
 | **Visualization (Matplotlib)** | `plt.scatter()` | Plots the data points and centroids in a 2D scatter plot |
 | | `plt.title()`, `plt.xlabel()`, `plt.ylabel()`, `plt.legend()`, `plt.grid()`, `plt.show()` | Configures labels, legend, gridlines, and displays the final graph |
 
-## Program & Output
+## Program 
+
+    import numpy as np
+    import matplotlib.pyplot as plt
+    from sklearn.cluster import KMeans
+    
+    # Input customer data
+    X = np.array([20, 22, 25, 70, 75, 80, 30, 35,
+                  32, 24, 28, 75, 71, 83, 28, 27])
+    
+    Y = np.array([30, 35, 40, 80, 85, 90, 70, 75,
+                  33, 31, 45, 70, 83, 89, 60, 67])
+    
+    # Combine features
+    data = np.column_stack((X, Y))
+    
+    # Create KMeans model
+    kmeans = KMeans(n_clusters=3, random_state=42, n_init=10)
+    
+    # Fit model and predict clusters
+    labels = kmeans.fit_predict(data)
+    
+    # Get cluster centroids
+    centroids = kmeans.cluster_centers_
+    
+    # Display cluster labels
+    print("Cluster Labels:")
+    print(labels)
+    
+    # Display centroids
+    print("\nCluster Centroids:")
+    print(centroids)
+    
+    # Plot clusters
+    plt.figure(figsize=(8, 5))
+    
+    plt.scatter(data[:, 0], data[:, 1],
+                c=labels, cmap='viridis',
+                s=100, label='Customers')
+    
+    # Plot centroids
+    plt.scatter(centroids[:, 0], centroids[:, 1],
+                color='red', marker='X',
+                s=200, label='Centroids')
+    
+    plt.title("K-Means Customer Segmentation")
+    plt.xlabel("Annual Income (Lakhs)")
+    plt.ylabel("Spending Score")
+    plt.legend()
+    plt.grid()
+    plt.show()
+## Output
+
+    Cluster Labels:
+    [1 1 1 0 0 0 2 2 1 1 1 0 0 0 2 2]
+    
+    Cluster Centroids:
+    [[75.66666667 82.83333333]
+     [25.16666667 35.66666667]
+     [30.         68.        ]]
+     <img width="431" height="295" alt="image" src="https://github.com/user-attachments/assets/9d53ac82-9ab2-4327-9709-a27a1981661f" />
+
+
 
 ## Result
+Thus, the K-Means Clustering algorithm was successfully implemented using Python and Scikit-learn. The 16 customer data points were grouped into three distinct clusters based on annual income and spending score. The cluster labels and centroids were identified and visualized using a scatter plot, helping to understand different customer segments for market segmentation.
